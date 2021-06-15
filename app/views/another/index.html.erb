@@ -4,3 +4,22 @@
 <p>
   <%= @greeting %>
 </p>
+
+<%= button_to "Go to edit page",
+     {:controller => 'another',
+     :action => 'edit'},
+     :method => :get %>
+
+<%= link_to "Go to link page",
+    {:controller => 'another',
+    :action => 'index',
+    :pickColor => 'blue',
+    :pickCar => 'sedan',
+    :id => 1},
+    :method => :get %>
+
+<p>
+  this is the received id: <%= @id %>
+  this is the received car: <%= @pickCar %>
+  this is the received color: <%= @pickColor %>
+</p>
